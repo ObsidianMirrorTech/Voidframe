@@ -1,0 +1,82 @@
+{
+    "gemini-2.0-pro-exp-02-05": {
+        "input_types": ["text"],
+        "output_types": ["text"],
+        "compatible_file_extensions": []
+    },
+    "gemini-2.0-flash": {
+        "input_types": ["text", "image", "audio", "video"],
+        "output_types": ["text", "image", "audio"],
+        "compatible_file_extensions": [
+            ".txt",
+            ".pdf",
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".webp",
+            ".mp3",
+            ".mp4"
+        ]
+    },
+    "gemini-2.0-flash-thinking-exp-01-21": {
+        "input_types": ["text"],
+        "output_types": ["text"],
+        "compatible_file_extensions": []
+    },
+    "gemini-2.0-flash-lite": {
+        "input_types": ["text", "image", "audio", "video"],
+        "output_types": ["text"],
+        "compatible_file_extensions": [
+            ".txt",
+            ".pdf",
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".webp",
+            ".mp3",
+            ".mp4"
+        ]
+    },
+    "gemini-1.5-flash": {
+        "input_types": ["text", "image", "audio", "video"],
+        "output_types": ["text"],
+        "compatible_file_extensions": [
+            ".txt",
+            ".pdf",
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".webp",
+            ".mp3",
+            ".mp4"
+        ]
+    },
+    "gemini-1.5-flash-8b": {
+        "input_types": ["text", "image", "audio", "video"],
+        "output_types": ["text"],
+        "compatible_file_extensions": [
+            ".txt",
+            ".pdf",
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".webp",
+            ".mp3",
+            ".mp4"
+        ]
+    },
+    "gemini-1.5-pro": {
+        "input_types": ["text", "image", "audio", "video"],
+        "output_types": ["text"],
+        "compatible_file_extensions": [
+            ".txt",
+            ".pdf",
+            ".jpg",
+            ".jpeg",
+            ".png",
+            ".webp",
+            ".mp3",
+            ".mp4"
+        ]
+    }
+}

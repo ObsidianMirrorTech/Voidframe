@@ -1,0 +1,53 @@
+{
+  "generation_parameters": {
+    "model": {
+      "ui_label": "Model:",
+      "ui_tooltip": "Select the OpenAI model.",
+      "value_type": "str",
+      "widget_type": "dropdown",
+      "options": [
+        "gpt-3.5-turbo",
+        "gpt-4-turbo",
+        "gpt-4o-mini",
+        "gpt-4o"
+      ],
+      "default": "gpt-4o-mini"
+    },
+    "temperature": {
+      "ui_label": "Temperature:",
+      "ui_tooltip": "Controls randomness (0.0-2.0). Higher values = more random.",
+      "value_type": "float",
+      "widget_type": "spinner",
+      "default": 0.7,
+      "range": [
+        0.0,
+        2.0
+      ],
+      "step": 0.1
+    },
+    "top_p": {
+      "ui_label": "Top P:",
+      "ui_tooltip": "Nucleus sampling (0.0-1.0). Consider altering temperature or Top P, not both.",
+      "value_type": "float",
+      "widget_type": "spinner",
+      "default": 0.95,
+      "range": [
+        0.0,
+        1.0
+      ],
+      "step": 0.05
+    },
+    "max_output_tokens": {
+      "ui_label": "Max Tokens:",
+      "ui_tooltip": "Maximum tokens to generate in the completion.",
+      "value_type": "int",
+      "widget_type": "spinner",
+      "default": 1024,
+      "range": [
+        1,
+        4096
+      ],
+      "step": 64
+    }
+  }
+}

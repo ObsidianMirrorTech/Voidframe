@@ -1,0 +1,326 @@
+2025-04-09 06:15:03,599 [DEBUG] [logging:57] Logging system initialized with DEBUG level.
+2025-04-09 06:15:03,600 [DEBUG] [logging:60] Testing Unicode: é Г 测试 👋
+2025-04-09 06:15:03,615 [INFO] [main:243] --- Application Starting ---
+2025-04-09 06:15:03,616 [INFO] [data_router:160] Loaded initial state: Active API='gemini', Active Model='gemini-2.0-flash'
+2025-04-09 06:15:03,616 [INFO] [data_router:116] QThreadPool initialized. Max threads: 28
+2025-04-09 06:15:03,616 [INFO] [plugin_manager:49] Scanning for interface plugins in: C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\plugins\interfaces
+2025-04-09 06:15:03,621 [INFO] [plugin_manager:99] Successfully loaded interface plugin: 'Default Chat UI'
+2025-04-09 06:15:03,632 [INFO] [plugin_manager:99] Successfully loaded interface plugin: 'My Custom UI'
+2025-04-09 06:15:03,632 [INFO] [plugin_manager:49] Scanning for extension plugins in: C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\plugins\extensions
+2025-04-09 06:15:03,632 [INFO] [plugin_manager:39] Plugins loaded: ['Default Chat UI', 'My Custom UI']
+2025-04-09 06:15:03,633 [INFO] [api_interface:59] Discovering API adapters in: C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\api
+2025-04-09 06:15:03,633 [DEBUG] [api_interface:71] Found potential API: chatgpt
+2025-04-09 06:15:04,036 [DEBUG] [api:20] OpenAI client created
+2025-04-09 06:15:04,037 [INFO] [api:14] ChatGPT Adapter Initialized
+2025-04-09 06:15:04,037 [INFO] [api_interface:87] Loaded API adapter: 'chatgpt'
+2025-04-09 06:15:04,037 [DEBUG] [api_interface:71] Found potential API: gemini
+2025-04-09 06:15:04,345 [DEBUG] [api:72] genai.Client created successfully.
+2025-04-09 06:15:04,346 [INFO] [api:33] Gemini Adapter Initialized (using Client pattern)
+2025-04-09 06:15:04,346 [INFO] [api:40] Detected signature for client.models.generate_content: (*, model: str, contents: Union[list[Union[google.genai.types.Content, list[Union[google.genai.types.File, google.genai.types.Part, str]], google.genai.types.File, google.genai.types.Part, str]], google.genai.types.Content, list[Union[google.genai.types.File, google.genai.types.Part, str]], google.genai.types.File, google.genai.types.Part, str, list[Union[google.genai.types.Content, list[Union[google.genai.types.File, google.genai.types.Part, str]], google.genai.types.File, google.genai.types.Part, str, google.genai.types.ContentDict]], google.genai.types.ContentDict], config: Union[google.genai.types.GenerateContentConfig, google.genai.types.GenerateContentConfigDict, NoneType] = None) -> google.genai.types.GenerateContentResponse
+2025-04-09 06:15:04,346 [INFO] [api_interface:87] Loaded API adapter: 'gemini'
+2025-04-09 06:15:04,346 [INFO] [main:269] Initialized DummyChatManager
+2025-04-09 06:15:04,346 [DEBUG] [main:291] DummyChatManager: Loading most recent (no-op)
+2025-04-09 06:15:04,346 [INFO] [data_router:295] Core components registered with DataRouter.
+2025-04-09 06:15:04,346 [DEBUG] [data_router:168] Syncing API settings in program state...
+2025-04-09 06:15:04,347 [INFO] [main:302] PluginManager initialized, plugins should be loaded.
+2025-04-09 06:15:04,355 [INFO] [main:138] Attempting to load configured UI plugin: 'Default Chat UI' from interfaces
+2025-04-09 06:15:04,355 [INFO] [main:148] Successfully retrieved UI instance from plugin: 'Default Chat UI'
+2025-04-09 06:15:04,355 [INFO] [data_router:307] Active UI instance set in DataRouter: DefaultChatUI
+2025-04-09 06:15:04,356 [INFO] [main:223] Set central widget to: DefaultChatUI
+2025-04-09 06:15:04,436 [INFO] [main:313] Application startup complete. Main window displayed.
+2025-04-09 06:15:07,202 [DEBUG] [data_router:311] show_config_window called.
+2025-04-09 06:15:07,203 [INFO] [data_router:319] Creating and showing configuration window.
+2025-04-09 06:15:07,203 [DEBUG] [models_config_tab:37] ModelsConfigWidget init_ui started.
+2025-04-09 06:15:07,203 [DEBUG] [models_config_tab:48] ModelsConfigWidget init_ui: Creating tab for chatgpt
+2025-04-09 06:15:07,204 [DEBUG] [models_config_tab:89] ModelsConfigWidget init_ui: Stored layout for 'chatgpt' (ID: 2879108647664). Current keys: ['chatgpt']
+2025-04-09 06:15:07,207 [DEBUG] [models_config_tab:104] ModelsConfigWidget init_ui: Attempting immediate field load for first tab 'chatgpt'
+2025-04-09 06:15:07,207 [DEBUG] [models_config_tab:184] load_api_settings_fields: Attempting to get layout for 'chatgpt'.
+2025-04-09 06:15:07,207 [DEBUG] [models_config_tab:185] load_api_settings_fields: Current self.settings_layouts keys: ['chatgpt']
+2025-04-09 06:15:07,207 [DEBUG] [models_config_tab:186] load_api_settings_fields: Full self.settings_layouts dict: {'chatgpt': <PyQt6.QtWidgets.QFormLayout object at 0x0000029E583F8AF0>}
+2025-04-09 06:15:07,207 [DEBUG] [models_config_tab:188] load_api_settings_fields: Result of get('chatgpt') is: <PyQt6.QtWidgets.QFormLayout object at 0x0000029E583F8AF0> (Type: <class 'PyQt6.QtWidgets.QFormLayout'>, ID: N/A)
+2025-04-09 06:15:07,207 [ERROR] [models_config_tab:192] CRITICAL: Layout for API 'chatgpt' could not be retrieved from self.settings_layouts during load.
+2025-04-09 06:15:07,207 [DEBUG] [models_config_tab:48] ModelsConfigWidget init_ui: Creating tab for gemini
+2025-04-09 06:15:07,207 [DEBUG] [models_config_tab:89] ModelsConfigWidget init_ui: Stored layout for 'gemini' (ID: 2879108649824). Current keys: ['chatgpt', 'gemini']
+2025-04-09 06:15:07,207 [DEBUG] [models_config_tab:109] ModelsConfigWidget init_ui finished.
+2025-04-09 06:15:07,208 [DEBUG] [global_config_tab:36] Loading global settings from C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\storage\system_prompt.json and C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\storage\user_info.json
+2025-04-09 06:15:08,543 [DEBUG] [models_config_tab:116] Tab changed to index 1, API: 'gemini'
+2025-04-09 06:15:08,544 [DEBUG] [models_config_tab:119] Fields for 'gemini' not yet loaded or empty. Proceeding to load.
+2025-04-09 06:15:08,544 [DEBUG] [models_config_tab:184] load_api_settings_fields: Attempting to get layout for 'gemini'.
+2025-04-09 06:15:08,544 [DEBUG] [models_config_tab:185] load_api_settings_fields: Current self.settings_layouts keys: ['chatgpt', 'gemini']
+2025-04-09 06:15:08,544 [DEBUG] [models_config_tab:186] load_api_settings_fields: Full self.settings_layouts dict: {'chatgpt': <PyQt6.QtWidgets.QFormLayout object at 0x0000029E583F8AF0>, 'gemini': <PyQt6.QtWidgets.QFormLayout object at 0x0000029E583F9360>}
+2025-04-09 06:15:08,544 [DEBUG] [models_config_tab:188] load_api_settings_fields: Result of get('gemini') is: <PyQt6.QtWidgets.QFormLayout object at 0x0000029E583F9360> (Type: <class 'PyQt6.QtWidgets.QFormLayout'>, ID: N/A)
+2025-04-09 06:15:08,544 [ERROR] [models_config_tab:192] CRITICAL: Layout for API 'gemini' could not be retrieved from self.settings_layouts during load.
+2025-04-09 06:15:14,707 [INFO] [models_config_tab:162] User selected new active API/Model: gemini / gemini-2.0-flash-thinking-exp-01-21
+2025-04-09 06:15:14,707 [INFO] [data_router:681] Setting active Model globally: 'gemini-2.0-flash-thinking-exp-01-21' (was 'gemini-2.0-flash')
+2025-04-09 06:15:14,708 [INFO] [data_router:690] Updating 'selected_model' for API 'gemini' in state settings block to: 'gemini-2.0-flash-thinking-exp-01-21'
+2025-04-09 06:15:14,708 [DEBUG] [data_router:135] Attempting to write program state to C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\storage\program_state.json.
+2025-04-09 06:15:14,709 [INFO] [data_router:142] Program state saved successfully to C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\storage\program_state.json.
+2025-04-09 06:15:14,709 [DEBUG] [data_router:696] State file saved due to selection change.
+2025-04-09 06:15:17,279 [INFO] [main_config:102] Attempting to save settings from ConfigWindow.
+2025-04-09 06:15:17,279 [DEBUG] [global_config_tab:43] Saving global settings to C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\storage\system_prompt.json and C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\storage\user_info.json
+2025-04-09 06:15:17,280 [INFO] [global_config_tab:50] Global prompt settings saved.
+2025-04-09 06:15:17,280 [WARNING] [models_config_tab:422] Settings fields dict entry missing for 'gemini'. Load likely failed.
+2025-04-09 06:15:17,280 [WARNING] [main_config:123] Parameter validation failed for 'gemini'. Not saving.
+2025-04-09 08:12:10,074 [DEBUG] [logging:57] Logging system initialized with DEBUG level.
+2025-04-09 08:12:10,074 [DEBUG] [logging:60] Testing Unicode: é Г 测试 👋
+2025-04-09 08:12:10,091 [INFO] [main:243] --- Application Starting ---
+2025-04-09 08:12:10,091 [INFO] [data_router:160] Loaded initial state: Active API='gemini', Active Model='gemini-2.0-flash-thinking-exp-01-21'
+2025-04-09 08:12:10,092 [INFO] [data_router:116] QThreadPool initialized. Max threads: 28
+2025-04-09 08:12:10,092 [INFO] [plugin_manager:49] Scanning for interface plugins in: C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\plugins\interfaces
+2025-04-09 08:12:10,098 [INFO] [plugin_manager:99] Successfully loaded interface plugin: 'Default Chat UI'
+2025-04-09 08:12:10,109 [INFO] [plugin_manager:99] Successfully loaded interface plugin: 'My Custom UI'
+2025-04-09 08:12:10,109 [INFO] [plugin_manager:49] Scanning for extension plugins in: C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\plugins\extensions
+2025-04-09 08:12:10,109 [INFO] [plugin_manager:39] Plugins loaded: ['Default Chat UI', 'My Custom UI']
+2025-04-09 08:12:10,109 [INFO] [api_interface:59] Discovering API adapters in: C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\api
+2025-04-09 08:12:10,110 [DEBUG] [api_interface:71] Found potential API: chatgpt
+2025-04-09 08:12:10,535 [DEBUG] [api:20] OpenAI client created
+2025-04-09 08:12:10,535 [INFO] [api:14] ChatGPT Adapter Initialized
+2025-04-09 08:12:10,535 [INFO] [api_interface:87] Loaded API adapter: 'chatgpt'
+2025-04-09 08:12:10,535 [DEBUG] [api_interface:71] Found potential API: gemini
+2025-04-09 08:12:10,876 [DEBUG] [api:72] genai.Client created successfully.
+2025-04-09 08:12:10,876 [INFO] [api:33] Gemini Adapter Initialized (using Client pattern)
+2025-04-09 08:12:10,876 [INFO] [api:40] Detected signature for client.models.generate_content: (*, model: str, contents: Union[list[Union[google.genai.types.Content, list[Union[google.genai.types.File, google.genai.types.Part, str]], google.genai.types.File, google.genai.types.Part, str]], google.genai.types.Content, list[Union[google.genai.types.File, google.genai.types.Part, str]], google.genai.types.File, google.genai.types.Part, str, list[Union[google.genai.types.Content, list[Union[google.genai.types.File, google.genai.types.Part, str]], google.genai.types.File, google.genai.types.Part, str, google.genai.types.ContentDict]], google.genai.types.ContentDict], config: Union[google.genai.types.GenerateContentConfig, google.genai.types.GenerateContentConfigDict, NoneType] = None) -> google.genai.types.GenerateContentResponse
+2025-04-09 08:12:10,876 [INFO] [api_interface:87] Loaded API adapter: 'gemini'
+2025-04-09 08:12:10,876 [INFO] [main:269] Initialized DummyChatManager
+2025-04-09 08:12:10,876 [DEBUG] [main:291] DummyChatManager: Loading most recent (no-op)
+2025-04-09 08:12:10,876 [INFO] [data_router:295] Core components registered with DataRouter.
+2025-04-09 08:12:10,876 [DEBUG] [data_router:168] Syncing API settings in program state...
+2025-04-09 08:12:10,877 [INFO] [main:302] PluginManager initialized, plugins should be loaded.
+2025-04-09 08:12:10,888 [INFO] [main:138] Attempting to load configured UI plugin: 'Default Chat UI' from interfaces
+2025-04-09 08:12:10,888 [INFO] [main:148] Successfully retrieved UI instance from plugin: 'Default Chat UI'
+2025-04-09 08:12:10,888 [INFO] [data_router:307] Active UI instance set in DataRouter: DefaultChatUI
+2025-04-09 08:12:10,888 [INFO] [main:223] Set central widget to: DefaultChatUI
+2025-04-09 08:12:10,978 [INFO] [main:313] Application startup complete. Main window displayed.
+2025-04-09 08:12:12,917 [DEBUG] [data_router:311] show_config_window called.
+2025-04-09 08:12:12,919 [INFO] [data_router:319] Creating and showing configuration window.
+2025-04-09 08:12:12,919 [DEBUG] [models_config_tab:37] ModelsConfigWidget init_ui started.
+2025-04-09 08:12:12,919 [DEBUG] [models_config_tab:48] ModelsConfigWidget init_ui: Creating tab for chatgpt
+2025-04-09 08:12:12,920 [DEBUG] [models_config_tab:89] ModelsConfigWidget init_ui: Stored layout for 'chatgpt' (ID: 1970107615984). Current keys: ['chatgpt']
+2025-04-09 08:12:12,923 [DEBUG] [models_config_tab:104] ModelsConfigWidget init_ui: Attempting immediate field load for first tab 'chatgpt'
+2025-04-09 08:12:12,923 [DEBUG] [models_config_tab:184] load_api_settings_fields: Attempting to get layout for 'chatgpt'.
+2025-04-09 08:12:12,923 [DEBUG] [models_config_tab:185] load_api_settings_fields: Current self.settings_layouts keys: ['chatgpt']
+2025-04-09 08:12:12,923 [DEBUG] [models_config_tab:186] load_api_settings_fields: Full self.settings_layouts dict: {'chatgpt': <PyQt6.QtWidgets.QFormLayout object at 0x000001CAB3908AF0>}
+2025-04-09 08:12:12,923 [DEBUG] [models_config_tab:188] load_api_settings_fields: Result of get('chatgpt') is: <PyQt6.QtWidgets.QFormLayout object at 0x000001CAB3908AF0> (Type: <class 'PyQt6.QtWidgets.QFormLayout'>, ID: N/A)
+2025-04-09 08:12:12,924 [ERROR] [models_config_tab:192] CRITICAL: Layout for API 'chatgpt' could not be retrieved from self.settings_layouts during load.
+2025-04-09 08:12:12,924 [DEBUG] [models_config_tab:48] ModelsConfigWidget init_ui: Creating tab for gemini
+2025-04-09 08:12:12,924 [DEBUG] [models_config_tab:89] ModelsConfigWidget init_ui: Stored layout for 'gemini' (ID: 1970107618144). Current keys: ['chatgpt', 'gemini']
+2025-04-09 08:12:12,924 [DEBUG] [models_config_tab:109] ModelsConfigWidget init_ui finished.
+2025-04-09 08:12:12,925 [DEBUG] [global_config_tab:36] Loading global settings from C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\storage\system_prompt.json and C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\storage\user_info.json
+2025-04-09 08:12:14,673 [DEBUG] [models_config_tab:116] Tab changed to index 1, API: 'gemini'
+2025-04-09 08:12:14,674 [DEBUG] [models_config_tab:119] Fields for 'gemini' not yet loaded or empty. Proceeding to load.
+2025-04-09 08:12:14,674 [DEBUG] [models_config_tab:184] load_api_settings_fields: Attempting to get layout for 'gemini'.
+2025-04-09 08:12:14,674 [DEBUG] [models_config_tab:185] load_api_settings_fields: Current self.settings_layouts keys: ['chatgpt', 'gemini']
+2025-04-09 08:12:14,674 [DEBUG] [models_config_tab:186] load_api_settings_fields: Full self.settings_layouts dict: {'chatgpt': <PyQt6.QtWidgets.QFormLayout object at 0x000001CAB3908AF0>, 'gemini': <PyQt6.QtWidgets.QFormLayout object at 0x000001CAB3909360>}
+2025-04-09 08:12:14,674 [DEBUG] [models_config_tab:188] load_api_settings_fields: Result of get('gemini') is: <PyQt6.QtWidgets.QFormLayout object at 0x000001CAB3909360> (Type: <class 'PyQt6.QtWidgets.QFormLayout'>, ID: N/A)
+2025-04-09 08:12:14,674 [ERROR] [models_config_tab:192] CRITICAL: Layout for API 'gemini' could not be retrieved from self.settings_layouts during load.
+2025-04-10 04:47:22,537 [INFO] [models_config_tab:162] User selected new active API/Model: gemini / gemini-2.0-flash
+2025-04-10 04:47:22,538 [INFO] [data_router:681] Setting active Model globally: 'gemini-2.0-flash' (was 'gemini-2.0-flash-thinking-exp-01-21')
+2025-04-10 04:47:22,538 [INFO] [data_router:690] Updating 'selected_model' for API 'gemini' in state settings block to: 'gemini-2.0-flash'
+2025-04-10 04:47:22,539 [DEBUG] [data_router:135] Attempting to write program state to C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\storage\program_state.json.
+2025-04-10 04:47:22,539 [INFO] [data_router:142] Program state saved successfully to C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\storage\program_state.json.
+2025-04-10 04:47:22,539 [DEBUG] [data_router:696] State file saved due to selection change.
+2025-04-10 04:47:24,914 [INFO] [main_config:102] Attempting to save settings from ConfigWindow.
+2025-04-10 04:47:24,915 [DEBUG] [global_config_tab:43] Saving global settings to C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\storage\system_prompt.json and C:\Users\obsid\Desktop\AI Projects\Voidframe_0.3\storage\user_info.json
+2025-04-10 04:47:24,915 [INFO] [global_config_tab:50] Global prompt settings saved.
+2025-04-10 04:47:24,916 [WARNING] [models_config_tab:422] Settings fields dict entry missing for 'gemini'. Load likely failed.
+2025-04-10 04:47:24,916 [WARNING] [main_config:123] Parameter validation failed for 'gemini'. Not saving.
+2025-04-10 04:47:35,345 [INFO] [data_router:333] Handling user input: 'Hi...'
+2025-04-10 04:47:35,345 [DEBUG] [data_router:354] Applying pre_history hooks...
+2025-04-10 04:47:35,345 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:47:35,345 [DEBUG] [main:273] DummyChatManager: Appending {'role': 'user', 'content': 'Hi'}
+2025-04-10 04:47:35,345 [DEBUG] [data_router:364] User message appended to history.
+2025-04-10 04:47:35,346 [DEBUG] [data_router:366] newMessageReady signal emitted for user message.
+2025-04-10 04:47:35,346 [DEBUG] [main:277] DummyChatManager: Getting history
+2025-04-10 04:47:35,346 [DEBUG] [data_router:376] Retrieved chat history (length: 1).
+2025-04-10 04:47:35,346 [DEBUG] [data_router:386] Building API request data...
+2025-04-10 04:47:35,348 [DEBUG] [data_router:418] Loaded system prompt from system_prompt.json
+2025-04-10 04:47:35,348 [DEBUG] [data_router:434] Loaded user info from user_info.json
+2025-04-10 04:47:35,349 [DEBUG] [data_router:449] Prepended system prompt to messages.
+2025-04-10 04:47:35,349 [DEBUG] [data_router:464] Using project/chat ID: dummy_chat
+2025-04-10 04:47:35,349 [DEBUG] [data_router:468] Using globally selected model for request: 'gemini-2.0-flash'
+2025-04-10 04:47:35,354 [DEBUG] [data_router:477] Read settings from state for API 'gemini': {'temperature': '1', 'top_p': '0.95', 'top_k': '40', 'max_output_tokens': '1024', 'base64_upload_threshold': '1520', 'selected_model': 'gemini-2.0-flash'}
+2025-04-10 04:47:35,355 [DEBUG] [data_router:481] Using default params from config for API 'gemini': {'temperature': 1.0, 'top_p': 0.95, 'top_k': 40, 'max_output_tokens': 1024, 'base64_upload_threshold': 1520}
+2025-04-10 04:47:35,355 [DEBUG] [data_router:483] Alterable parameters for 'gemini': ['temperature', 'top_p', 'top_k', 'max_output_tokens', 'base64_upload_threshold']
+2025-04-10 04:47:35,355 [DEBUG] [data_router:494]   Param 'temperature': Using value '1.0' (state file, converted to float)
+2025-04-10 04:47:35,355 [DEBUG] [data_router:494]   Param 'top_p': Using value '0.95' (state file, converted to float)
+2025-04-10 04:47:35,355 [DEBUG] [data_router:497]   Param 'top_k': Using value '40' (state file, converted to int)
+2025-04-10 04:47:35,355 [DEBUG] [data_router:497]   Param 'max_output_tokens': Using value '1024' (state file, converted to int)
+2025-04-10 04:47:35,355 [DEBUG] [data_router:497]   Param 'base64_upload_threshold': Using value '1520' (state file, converted to int)
+2025-04-10 04:47:35,355 [DEBUG] [data_router:521] Final request_data constructed (excluding messages): Model='gemini-2.0-flash', Params={'temperature': 1.0, 'top_p': 0.95, 'top_k': 40, 'max_output_tokens': 1024, 'base64_upload_threshold': 1520, 'tools': None, 'tool_choice': None, 'persistent_uploads': False, 'project_id': 'dummy_chat'}
+2025-04-10 04:47:35,355 [DEBUG] [data_router:389] Built request data for API 'gemini', Model 'gemini-2.0-flash'.
+2025-04-10 04:47:35,355 [DEBUG] [data_router:395] Applying pre_api hooks...
+2025-04-10 04:47:35,355 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:47:35,355 [INFO] [data_router:402] Dispatching API call to worker thread for API: 'gemini'...
+2025-04-10 04:47:35,356 [DEBUG] [data_router:405] API worker started in thread pool.
+2025-04-10 04:47:35,357 [INFO] [data_router:48] API Worker started for API: 'gemini'
+2025-04-10 04:47:35,358 [DEBUG] [api_interface:122] Dispatching inference call to adapter: 'gemini'
+2025-04-10 04:47:35,358 [DEBUG] [api:127] Gemini Adapter: Using model='gemini-2.0-flash', T=1.0, P=0.95, K=40, MaxT=1024
+2025-04-10 04:47:35,358 [DEBUG] [api:135] Prepending 'models/' to model name: models/gemini-2.0-flash
+2025-04-10 04:47:35,359 [DEBUG] [api:188] Added system message content to be used in system_instruction.
+2025-04-10 04:47:35,359 [DEBUG] [api:216] Using Content object for system_instruction.
+2025-04-10 04:47:35,359 [DEBUG] [api:243] Created GenerateContentConfig object.
+2025-04-10 04:47:35,359 [DEBUG] [api:260] Attempting Gemini API call to model 'models/gemini-2.0-flash'...
+2025-04-10 04:47:35,360 [DEBUG] [api:262]   Contents: [{'role': 'user', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='Hi')]}]
+2025-04-10 04:47:35,360 [DEBUG] [api:264]   Config: http_options=None system_instruction=Content(parts=[Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='You\'re a helpful assistant that starts every sentence with the word "apple".')], role='system') temperature=1.0 top_p=0.95 top_k=40.0 candidate_count=None max_output_tokens=1024 stop_sequences=None response_logprobs=None logprobs=None presence_penalty=None frequency_penalty=None seed=None response_mime_type=None response_schema=None routing_config=None safety_settings=None tools=None tool_config=None labels=None cached_content=None response_modalities=None media_resolution=None speech_config=None audio_timestamp=None automatic_function_calling=None thinking_config=None
+2025-04-10 04:47:35,360 [INFO] [models:5278] AFC is enabled with max remote calls: 10.
+2025-04-10 04:47:35,365 [DEBUG] [connectionpool:1049] Starting new HTTPS connection (1): generativelanguage.googleapis.com:443
+2025-04-10 04:47:35,834 [DEBUG] [connectionpool:544] https://generativelanguage.googleapis.com:443 "POST /v1beta/models/gemini-2.0-flash:generateContent HTTP/1.1" 200 None
+2025-04-10 04:47:35,839 [INFO] [models:5289] AFC remote call 1 is done.
+2025-04-10 04:47:35,839 [DEBUG] [api:312] Gemini Response received. Text length: 20
+2025-04-10 04:47:35,839 [INFO] [data_router:55] API Worker finished for 'gemini'. Duration: 0.48s
+2025-04-10 04:47:35,839 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:47:35,839 [DEBUG] [main:273] DummyChatManager: Appending {'role': 'assistant', 'content': 'Apple, hello there!'}
+2025-04-10 04:47:35,839 [DEBUG] [data_router:70] Assistant message appended to history.
+2025-04-10 04:47:35,841 [DEBUG] [data_router:81] newMessageReady signal emitted for UI.
+2025-04-10 04:47:35,841 [DEBUG] [main:277] DummyChatManager: Getting history
+2025-04-10 04:47:35,841 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:47:46,932 [INFO] [data_router:333] Handling user input: 'who are you?...'
+2025-04-10 04:47:46,932 [DEBUG] [data_router:354] Applying pre_history hooks...
+2025-04-10 04:47:46,932 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:47:46,932 [DEBUG] [main:273] DummyChatManager: Appending {'role': 'user', 'content': 'who are you?'}
+2025-04-10 04:47:46,932 [DEBUG] [data_router:364] User message appended to history.
+2025-04-10 04:47:46,933 [DEBUG] [data_router:366] newMessageReady signal emitted for user message.
+2025-04-10 04:47:46,933 [DEBUG] [main:277] DummyChatManager: Getting history
+2025-04-10 04:47:46,933 [DEBUG] [data_router:376] Retrieved chat history (length: 3).
+2025-04-10 04:47:46,933 [DEBUG] [data_router:386] Building API request data...
+2025-04-10 04:47:46,933 [DEBUG] [data_router:418] Loaded system prompt from system_prompt.json
+2025-04-10 04:47:46,933 [DEBUG] [data_router:434] Loaded user info from user_info.json
+2025-04-10 04:47:46,933 [DEBUG] [data_router:449] Prepended system prompt to messages.
+2025-04-10 04:47:46,933 [DEBUG] [data_router:464] Using project/chat ID: dummy_chat
+2025-04-10 04:47:46,933 [DEBUG] [data_router:468] Using globally selected model for request: 'gemini-2.0-flash'
+2025-04-10 04:47:46,933 [DEBUG] [data_router:477] Read settings from state for API 'gemini': {'temperature': '1', 'top_p': '0.95', 'top_k': '40', 'max_output_tokens': '1024', 'base64_upload_threshold': '1520', 'selected_model': 'gemini-2.0-flash'}
+2025-04-10 04:47:46,933 [DEBUG] [data_router:481] Using default params from config for API 'gemini': {'temperature': 1.0, 'top_p': 0.95, 'top_k': 40, 'max_output_tokens': 1024, 'base64_upload_threshold': 1520}
+2025-04-10 04:47:46,933 [DEBUG] [data_router:483] Alterable parameters for 'gemini': ['temperature', 'top_p', 'top_k', 'max_output_tokens', 'base64_upload_threshold']
+2025-04-10 04:47:46,935 [DEBUG] [data_router:494]   Param 'temperature': Using value '1.0' (state file, converted to float)
+2025-04-10 04:47:46,935 [DEBUG] [data_router:494]   Param 'top_p': Using value '0.95' (state file, converted to float)
+2025-04-10 04:47:46,935 [DEBUG] [data_router:497]   Param 'top_k': Using value '40' (state file, converted to int)
+2025-04-10 04:47:46,935 [DEBUG] [data_router:497]   Param 'max_output_tokens': Using value '1024' (state file, converted to int)
+2025-04-10 04:47:46,935 [DEBUG] [data_router:497]   Param 'base64_upload_threshold': Using value '1520' (state file, converted to int)
+2025-04-10 04:47:46,935 [DEBUG] [data_router:521] Final request_data constructed (excluding messages): Model='gemini-2.0-flash', Params={'temperature': 1.0, 'top_p': 0.95, 'top_k': 40, 'max_output_tokens': 1024, 'base64_upload_threshold': 1520, 'tools': None, 'tool_choice': None, 'persistent_uploads': False, 'project_id': 'dummy_chat'}
+2025-04-10 04:47:46,935 [DEBUG] [data_router:389] Built request data for API 'gemini', Model 'gemini-2.0-flash'.
+2025-04-10 04:47:46,935 [DEBUG] [data_router:395] Applying pre_api hooks...
+2025-04-10 04:47:46,935 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:47:46,935 [INFO] [data_router:402] Dispatching API call to worker thread for API: 'gemini'...
+2025-04-10 04:47:46,935 [DEBUG] [data_router:405] API worker started in thread pool.
+2025-04-10 04:47:46,935 [INFO] [data_router:48] API Worker started for API: 'gemini'
+2025-04-10 04:47:46,935 [DEBUG] [api_interface:122] Dispatching inference call to adapter: 'gemini'
+2025-04-10 04:47:46,936 [DEBUG] [api:127] Gemini Adapter: Using model='gemini-2.0-flash', T=1.0, P=0.95, K=40, MaxT=1024
+2025-04-10 04:47:46,936 [DEBUG] [api:135] Prepending 'models/' to model name: models/gemini-2.0-flash
+2025-04-10 04:47:46,936 [DEBUG] [api:188] Added system message content to be used in system_instruction.
+2025-04-10 04:47:46,936 [DEBUG] [api:216] Using Content object for system_instruction.
+2025-04-10 04:47:46,936 [DEBUG] [api:243] Created GenerateContentConfig object.
+2025-04-10 04:47:46,936 [DEBUG] [api:260] Attempting Gemini API call to model 'models/gemini-2.0-flash'...
+2025-04-10 04:47:46,936 [DEBUG] [api:262]   Contents: [{'role': 'user', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='Hi')]}, {'role': 'model', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='Apple, hello there!')]}, {'role': 'user', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='who are you?')]}]
+2025-04-10 04:47:46,936 [DEBUG] [api:264]   Config: http_options=None system_instruction=Content(parts=[Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='You\'re a helpful assistant that starts every sentence with the word "apple".')], role='system') temperature=1.0 top_p=0.95 top_k=40.0 candidate_count=None max_output_tokens=1024 stop_sequences=None response_logprobs=None logprobs=None presence_penalty=None frequency_penalty=None seed=None response_mime_type=None response_schema=None routing_config=None safety_settings=None tools=None tool_config=None labels=None cached_content=None response_modalities=None media_resolution=None speech_config=None audio_timestamp=None automatic_function_calling=None thinking_config=None
+2025-04-10 04:47:46,936 [INFO] [models:5278] AFC is enabled with max remote calls: 10.
+2025-04-10 04:47:46,938 [DEBUG] [connectionpool:1049] Starting new HTTPS connection (1): generativelanguage.googleapis.com:443
+2025-04-10 04:47:47,368 [DEBUG] [connectionpool:544] https://generativelanguage.googleapis.com:443 "POST /v1beta/models/gemini-2.0-flash:generateContent HTTP/1.1" 200 None
+2025-04-10 04:47:47,369 [INFO] [models:5289] AFC remote call 1 is done.
+2025-04-10 04:47:47,370 [DEBUG] [api:312] Gemini Response received. Text length: 55
+2025-04-10 04:47:47,370 [INFO] [data_router:55] API Worker finished for 'gemini'. Duration: 0.44s
+2025-04-10 04:47:47,370 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:47:47,370 [DEBUG] [main:273] DummyChatManager: Appending {'role': 'assistant', 'content': 'Apple, I am a large language model, trained by Google.'}
+2025-04-10 04:47:47,370 [DEBUG] [data_router:70] Assistant message appended to history.
+2025-04-10 04:47:47,370 [DEBUG] [data_router:81] newMessageReady signal emitted for UI.
+2025-04-10 04:47:47,371 [DEBUG] [main:277] DummyChatManager: Getting history
+2025-04-10 04:47:47,371 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:47:59,744 [INFO] [data_router:333] Handling user input: 'what's the first thing I said to you?...'
+2025-04-10 04:47:59,744 [DEBUG] [data_router:354] Applying pre_history hooks...
+2025-04-10 04:47:59,744 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:47:59,744 [DEBUG] [main:273] DummyChatManager: Appending {'role': 'user', 'content': "what's the first thing I said to you?"}
+2025-04-10 04:47:59,745 [DEBUG] [data_router:364] User message appended to history.
+2025-04-10 04:47:59,745 [DEBUG] [data_router:366] newMessageReady signal emitted for user message.
+2025-04-10 04:47:59,745 [DEBUG] [main:277] DummyChatManager: Getting history
+2025-04-10 04:47:59,745 [DEBUG] [data_router:376] Retrieved chat history (length: 5).
+2025-04-10 04:47:59,745 [DEBUG] [data_router:386] Building API request data...
+2025-04-10 04:47:59,745 [DEBUG] [data_router:418] Loaded system prompt from system_prompt.json
+2025-04-10 04:47:59,746 [DEBUG] [data_router:434] Loaded user info from user_info.json
+2025-04-10 04:47:59,746 [DEBUG] [data_router:449] Prepended system prompt to messages.
+2025-04-10 04:47:59,746 [DEBUG] [data_router:464] Using project/chat ID: dummy_chat
+2025-04-10 04:47:59,746 [DEBUG] [data_router:468] Using globally selected model for request: 'gemini-2.0-flash'
+2025-04-10 04:47:59,746 [DEBUG] [data_router:477] Read settings from state for API 'gemini': {'temperature': '1', 'top_p': '0.95', 'top_k': '40', 'max_output_tokens': '1024', 'base64_upload_threshold': '1520', 'selected_model': 'gemini-2.0-flash'}
+2025-04-10 04:47:59,746 [DEBUG] [data_router:481] Using default params from config for API 'gemini': {'temperature': 1.0, 'top_p': 0.95, 'top_k': 40, 'max_output_tokens': 1024, 'base64_upload_threshold': 1520}
+2025-04-10 04:47:59,746 [DEBUG] [data_router:483] Alterable parameters for 'gemini': ['temperature', 'top_p', 'top_k', 'max_output_tokens', 'base64_upload_threshold']
+2025-04-10 04:47:59,746 [DEBUG] [data_router:494]   Param 'temperature': Using value '1.0' (state file, converted to float)
+2025-04-10 04:47:59,746 [DEBUG] [data_router:494]   Param 'top_p': Using value '0.95' (state file, converted to float)
+2025-04-10 04:47:59,746 [DEBUG] [data_router:497]   Param 'top_k': Using value '40' (state file, converted to int)
+2025-04-10 04:47:59,746 [DEBUG] [data_router:497]   Param 'max_output_tokens': Using value '1024' (state file, converted to int)
+2025-04-10 04:47:59,746 [DEBUG] [data_router:497]   Param 'base64_upload_threshold': Using value '1520' (state file, converted to int)
+2025-04-10 04:47:59,746 [DEBUG] [data_router:521] Final request_data constructed (excluding messages): Model='gemini-2.0-flash', Params={'temperature': 1.0, 'top_p': 0.95, 'top_k': 40, 'max_output_tokens': 1024, 'base64_upload_threshold': 1520, 'tools': None, 'tool_choice': None, 'persistent_uploads': False, 'project_id': 'dummy_chat'}
+2025-04-10 04:47:59,746 [DEBUG] [data_router:389] Built request data for API 'gemini', Model 'gemini-2.0-flash'.
+2025-04-10 04:47:59,747 [DEBUG] [data_router:395] Applying pre_api hooks...
+2025-04-10 04:47:59,747 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:47:59,747 [INFO] [data_router:402] Dispatching API call to worker thread for API: 'gemini'...
+2025-04-10 04:47:59,747 [DEBUG] [data_router:405] API worker started in thread pool.
+2025-04-10 04:47:59,747 [INFO] [data_router:48] API Worker started for API: 'gemini'
+2025-04-10 04:47:59,747 [DEBUG] [api_interface:122] Dispatching inference call to adapter: 'gemini'
+2025-04-10 04:47:59,747 [DEBUG] [api:127] Gemini Adapter: Using model='gemini-2.0-flash', T=1.0, P=0.95, K=40, MaxT=1024
+2025-04-10 04:47:59,747 [DEBUG] [api:135] Prepending 'models/' to model name: models/gemini-2.0-flash
+2025-04-10 04:47:59,747 [DEBUG] [api:188] Added system message content to be used in system_instruction.
+2025-04-10 04:47:59,747 [DEBUG] [api:216] Using Content object for system_instruction.
+2025-04-10 04:47:59,747 [DEBUG] [api:243] Created GenerateContentConfig object.
+2025-04-10 04:47:59,747 [DEBUG] [api:260] Attempting Gemini API call to model 'models/gemini-2.0-flash'...
+2025-04-10 04:47:59,747 [DEBUG] [api:262]   Contents: [{'role': 'user', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='Hi')]}, {'role': 'model', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='Apple, hello there!')]}, {'role': 'user', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='who are you?')]}, {'role': 'model', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='Apple, I am a large language model, trained by Google.')]}, {'role': 'user', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text="what's the first thing I said to you?")]}]
+2025-04-10 04:47:59,748 [DEBUG] [api:264]   Config: http_options=None system_instruction=Content(parts=[Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='You\'re a helpful assistant that starts every sentence with the word "apple".')], role='system') temperature=1.0 top_p=0.95 top_k=40.0 candidate_count=None max_output_tokens=1024 stop_sequences=None response_logprobs=None logprobs=None presence_penalty=None frequency_penalty=None seed=None response_mime_type=None response_schema=None routing_config=None safety_settings=None tools=None tool_config=None labels=None cached_content=None response_modalities=None media_resolution=None speech_config=None audio_timestamp=None automatic_function_calling=None thinking_config=None
+2025-04-10 04:47:59,748 [INFO] [models:5278] AFC is enabled with max remote calls: 10.
+2025-04-10 04:47:59,749 [DEBUG] [connectionpool:1049] Starting new HTTPS connection (1): generativelanguage.googleapis.com:443
+2025-04-10 04:48:00,156 [DEBUG] [connectionpool:544] https://generativelanguage.googleapis.com:443 "POST /v1beta/models/gemini-2.0-flash:generateContent HTTP/1.1" 200 None
+2025-04-10 04:48:00,158 [INFO] [models:5289] AFC remote call 1 is done.
+2025-04-10 04:48:00,158 [DEBUG] [api:312] Gemini Response received. Text length: 48
+2025-04-10 04:48:00,158 [INFO] [data_router:55] API Worker finished for 'gemini'. Duration: 0.41s
+2025-04-10 04:48:00,159 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:48:00,159 [DEBUG] [main:273] DummyChatManager: Appending {'role': 'assistant', 'content': 'Apple, the first thing you said to me was "Hi".'}
+2025-04-10 04:48:00,159 [DEBUG] [data_router:70] Assistant message appended to history.
+2025-04-10 04:48:00,160 [DEBUG] [data_router:81] newMessageReady signal emitted for UI.
+2025-04-10 04:48:00,160 [DEBUG] [main:277] DummyChatManager: Getting history
+2025-04-10 04:48:00,160 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:48:08,960 [INFO] [data_router:333] Handling user input: 'and your response to that?...'
+2025-04-10 04:48:08,961 [DEBUG] [data_router:354] Applying pre_history hooks...
+2025-04-10 04:48:08,961 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:48:08,961 [DEBUG] [main:273] DummyChatManager: Appending {'role': 'user', 'content': 'and your response to that?'}
+2025-04-10 04:48:08,961 [DEBUG] [data_router:364] User message appended to history.
+2025-04-10 04:48:08,961 [DEBUG] [data_router:366] newMessageReady signal emitted for user message.
+2025-04-10 04:48:08,961 [DEBUG] [main:277] DummyChatManager: Getting history
+2025-04-10 04:48:08,961 [DEBUG] [data_router:376] Retrieved chat history (length: 7).
+2025-04-10 04:48:08,961 [DEBUG] [data_router:386] Building API request data...
+2025-04-10 04:48:08,961 [DEBUG] [data_router:418] Loaded system prompt from system_prompt.json
+2025-04-10 04:48:08,962 [DEBUG] [data_router:434] Loaded user info from user_info.json
+2025-04-10 04:48:08,962 [DEBUG] [data_router:449] Prepended system prompt to messages.
+2025-04-10 04:48:08,962 [DEBUG] [data_router:464] Using project/chat ID: dummy_chat
+2025-04-10 04:48:08,962 [DEBUG] [data_router:468] Using globally selected model for request: 'gemini-2.0-flash'
+2025-04-10 04:48:08,963 [DEBUG] [data_router:477] Read settings from state for API 'gemini': {'temperature': '1', 'top_p': '0.95', 'top_k': '40', 'max_output_tokens': '1024', 'base64_upload_threshold': '1520', 'selected_model': 'gemini-2.0-flash'}
+2025-04-10 04:48:08,963 [DEBUG] [data_router:481] Using default params from config for API 'gemini': {'temperature': 1.0, 'top_p': 0.95, 'top_k': 40, 'max_output_tokens': 1024, 'base64_upload_threshold': 1520}
+2025-04-10 04:48:08,963 [DEBUG] [data_router:483] Alterable parameters for 'gemini': ['temperature', 'top_p', 'top_k', 'max_output_tokens', 'base64_upload_threshold']
+2025-04-10 04:48:08,963 [DEBUG] [data_router:494]   Param 'temperature': Using value '1.0' (state file, converted to float)
+2025-04-10 04:48:08,963 [DEBUG] [data_router:494]   Param 'top_p': Using value '0.95' (state file, converted to float)
+2025-04-10 04:48:08,963 [DEBUG] [data_router:497]   Param 'top_k': Using value '40' (state file, converted to int)
+2025-04-10 04:48:08,963 [DEBUG] [data_router:497]   Param 'max_output_tokens': Using value '1024' (state file, converted to int)
+2025-04-10 04:48:08,963 [DEBUG] [data_router:497]   Param 'base64_upload_threshold': Using value '1520' (state file, converted to int)
+2025-04-10 04:48:08,963 [DEBUG] [data_router:521] Final request_data constructed (excluding messages): Model='gemini-2.0-flash', Params={'temperature': 1.0, 'top_p': 0.95, 'top_k': 40, 'max_output_tokens': 1024, 'base64_upload_threshold': 1520, 'tools': None, 'tool_choice': None, 'persistent_uploads': False, 'project_id': 'dummy_chat'}
+2025-04-10 04:48:08,963 [DEBUG] [data_router:389] Built request data for API 'gemini', Model 'gemini-2.0-flash'.
+2025-04-10 04:48:08,963 [DEBUG] [data_router:395] Applying pre_api hooks...
+2025-04-10 04:48:08,963 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:48:08,963 [INFO] [data_router:402] Dispatching API call to worker thread for API: 'gemini'...
+2025-04-10 04:48:08,963 [DEBUG] [data_router:405] API worker started in thread pool.
+2025-04-10 04:48:08,963 [INFO] [data_router:48] API Worker started for API: 'gemini'
+2025-04-10 04:48:08,964 [DEBUG] [api_interface:122] Dispatching inference call to adapter: 'gemini'
+2025-04-10 04:48:08,964 [DEBUG] [api:127] Gemini Adapter: Using model='gemini-2.0-flash', T=1.0, P=0.95, K=40, MaxT=1024
+2025-04-10 04:48:08,964 [DEBUG] [api:135] Prepending 'models/' to model name: models/gemini-2.0-flash
+2025-04-10 04:48:08,964 [DEBUG] [api:188] Added system message content to be used in system_instruction.
+2025-04-10 04:48:08,964 [DEBUG] [api:216] Using Content object for system_instruction.
+2025-04-10 04:48:08,964 [DEBUG] [api:243] Created GenerateContentConfig object.
+2025-04-10 04:48:08,964 [DEBUG] [api:260] Attempting Gemini API call to model 'models/gemini-2.0-flash'...
+2025-04-10 04:48:08,964 [DEBUG] [api:262]   Contents: [{'role': 'user', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='Hi')]}, {'role': 'model', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='Apple, hello there!')]}, {'role': 'user', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='who are you?')]}, {'role': 'model', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='Apple, I am a large language model, trained by Google.')]}, {'role': 'user', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text="what's the first thing I said to you?")]}, {'role': 'model', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='Apple, the first thing you said to me was "Hi".')]}, {'role': 'user', 'parts': [Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='and your response to that?')]}]
+2025-04-10 04:48:08,965 [DEBUG] [api:264]   Config: http_options=None system_instruction=Content(parts=[Part(video_metadata=None, thought=None, code_execution_result=None, executable_code=None, file_data=None, function_call=None, function_response=None, inline_data=None, text='You\'re a helpful assistant that starts every sentence with the word "apple".')], role='system') temperature=1.0 top_p=0.95 top_k=40.0 candidate_count=None max_output_tokens=1024 stop_sequences=None response_logprobs=None logprobs=None presence_penalty=None frequency_penalty=None seed=None response_mime_type=None response_schema=None routing_config=None safety_settings=None tools=None tool_config=None labels=None cached_content=None response_modalities=None media_resolution=None speech_config=None audio_timestamp=None automatic_function_calling=None thinking_config=None
+2025-04-10 04:48:08,965 [INFO] [models:5278] AFC is enabled with max remote calls: 10.
+2025-04-10 04:48:08,966 [DEBUG] [connectionpool:1049] Starting new HTTPS connection (1): generativelanguage.googleapis.com:443
+2025-04-10 04:48:09,454 [DEBUG] [connectionpool:544] https://generativelanguage.googleapis.com:443 "POST /v1beta/models/gemini-2.0-flash:generateContent HTTP/1.1" 200 None
+2025-04-10 04:48:09,455 [INFO] [models:5289] AFC remote call 1 is done.
+2025-04-10 04:48:09,455 [DEBUG] [api:312] Gemini Response received. Text length: 53
+2025-04-10 04:48:09,456 [INFO] [data_router:55] API Worker finished for 'gemini'. Duration: 0.48s
+2025-04-10 04:48:09,456 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.
+2025-04-10 04:48:09,456 [DEBUG] [main:273] DummyChatManager: Appending {'role': 'assistant', 'content': 'Apple, my response to that was "Apple, hello there!"'}
+2025-04-10 04:48:09,456 [DEBUG] [data_router:70] Assistant message appended to history.
+2025-04-10 04:48:09,458 [DEBUG] [data_router:81] newMessageReady signal emitted for UI.
+2025-04-10 04:48:09,458 [DEBUG] [main:277] DummyChatManager: Getting history
+2025-04-10 04:48:09,458 [DEBUG] [plugin_manager:123] get_enabled_plugins currently returns ALL loaded plugins.

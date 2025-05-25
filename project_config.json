@@ -1,0 +1,9 @@
+{
+  "storage_directory": "storage",
+  "project_base_subdir": "projects",
+  "api_directory": "api",
+  "plugins_interfaces_dir": "plugins/interfaces",
+  "plugins_extensions_dir": "plugins/extensions",
+  "selected_ui": "Default Chat UI",
+  "upload_directory": "storage/file_upload"
+}

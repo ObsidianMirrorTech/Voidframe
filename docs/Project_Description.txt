@@ -1,0 +1,162 @@
+# **📌 Modular AI API Program - Comprehensive Project Summary**
+
+## **📖 Overview**
+This project is a **modular AI API system** designed to provide **customizable AI interactions** through a **flexible plugin system, multiple AI model support, and an extensible UI framework.**  
+
+The **core principle** is modularity:  
+✅ **AI models are interchangeable** (Google Gemini, OpenAI, Local Models).  
+✅ **Plugins control their own storage, chat history, and functionality.**  
+✅ **The base program only manages system state, UI, and communication.**  
+✅ **Future-proofed for multimodal AI (live video, voice, and images).**  
+
+---
+
+## **🎯 Project Goals**
+### ✅ **Core Features**
+- **🔌 Fully Modular Plugin System** → Allows custom AI workflows, UI elements, and AI extensions.
+- **🧠 Multiple AI Model Support** → Google Gemini (default), OpenAI, and local models.
+- **🎨 UI Flexibility** → PyQt6-based layout, configurable by plugins.
+- **🔄 API Standardization** → Unified API layer for all models.
+- **📂 Structured Data Flow** → Clean separation of UI, plugins, and AI communication.
+- **🛠️ Robust Error Handling** → Prevents crashes, provides conflict resolution.
+- **📑 Extendable Configuration System** → All settings stored in JSON/TXT.
+
+### 🛠 **Future-Proofing**
+- **🎤 Live Multimodal AI Support** → Voice, video, and real-time AI responses.
+- **📡 Streaming Capabilities** → For real-time AI interactions.
+- **💾 Local AI Model Support** → Future capability to run AI locally.
+
+---
+
+## **📂 Project Directory Structure**
+To ensure **scalability, maintainability, and debugging ease**, each component is in a **dedicated directory**.
+
+```
+/Voidframe
+   ├── main.py                  # Entry point
+   ├── /core/                    # Main system logic
+   │   ├── plugin_manager.py      # Manages plugins, UI, and extensions
+   │   ├── api_interface.py       # Handles AI API interactions (moved from /api/)
+   │   ├── data_router.py         # Routes input/output through API & plugins
+   │   ├── ui_manager.py          # UI logic and event handling
+   │   ├── logging.py             # System-wide logging
+   ├── /api/                      # AI model API integrations (Gemini, OpenAI, etc.)
+   │   ├── /gemini/   
+   │   │   ├── __init__.py 
+   │   │   ├── api.py               # Main API handler
+   │   │   ├── file_api.py          # Handles direct file uploads
+   │   │   ├── upload_manager.py    # Converts files to base64
+   │   │   ├── multimodal_handler.py # Placeholder for live multimodal API
+   │   │   ├── config.json          # Config files for api settings
+   │   │   ├── info.json            # Holds information about the API's capabilities
+   │   ├── /chatgpt/   
+   │   │   ├── __init__.py  
+   │   │   ├── api.py               # Main API handler
+   │   │   ├── live_audio.py        # Manages real-time voice interactions
+   │   │   ├── file_handler.py      # Handles OpenAI’s file API differently
+   │   │   ├── config.json          # Config files for api settings
+   │   │   ├── info.json            # Holds information about the API's capabilities
+   │   ├── /local_model/    
+   │   │   ├── local_model.py       # Main handler
+   │   │   ├── storage_handler.py   # Manages local model weights
+   ├── /plugins/                  # Modular plugins for extending functionality
+   ├── /storage/                  # Stores logs, temp files, and configs
+   │   ├── system.log             # System logs
+   │   ├── program_state.json     # Stores which plugins are loaded, UI settings, etc.
+   │   ├── file_upload/           # Temp storage for AI file processing
+   ├── /assets/                   # UI assets
+   ├── README.md
+   ├── project_config.json        # Global configuration info
+   ├── requirements.txt
+```
+
+---
+
+## **🛠 Core System Responsibilities**
+### **1. Base Program (`/core/`)**
+The **base program** is responsible for **orchestrating plugins, UI, and AI model communication.**  
+It **does not store chat history** but instead maintains **program state.**  
+
+✅ **Startup & Initialization** → Loads plugins, UI, and API configurations.  
+✅ **Plugin Management** → Loads, validates, executes plugins.  
+✅ **Data Routing** → Moves user input between the AI API and plugins.  
+✅ **Logging & Debugging** → Tracks errors, system performance.  
+✅ **Conflict Resolution** → Detects plugin conflicts, asks user for resolution.  
+✅ **UI Management** → PyQt6-based UI, customizable via plugins.  
+
+---
+
+### **2. Plugin System (`/plugins/`)**
+Each **plugin manages its own data storage, chat history, and cache.**  
+
+✅ **Modify AI input/output** → Preprocess text, filter responses.  
+✅ **Add/Modify UI Elements** → Tabs, buttons, layouts.  
+✅ **Manage Own Chat History** → Plugins decide whether to store conversation logs.  
+✅ **Modify System Prompts** → Plugins can dynamically adjust AI instructions.  
+✅ **Extend API Functionality** → Plugins can modify API behavior.  
+✅ **Interact with other plugins** → Example: UI plugins modifying data-processing plugins.  
+
+🚫 **Plugins CANNOT modify** core system files.  
+🚫 **No default chat storage** – each plugin must implement its own method.  
+
+---
+
+### **3. API Layer (`/api/`)**
+Handles **communication with AI models** and ensures a **consistent interface** for different AI services.  
+
+✅ **Receives text, files, and images from `data_router.py`**.  
+✅ **Formats requests for the correct AI model (Google, OpenAI, etc.)**.  
+✅ **Sends responses back to `data_router.py` for processing.**  
+✅ **Handles API errors, failures, and logging.**  
+
+---
+
+## **🔄 How the System Handles Data**
+Since each **plugin** manages its own storage, the **base system only handles routing and state tracking**.
+
+**1️⃣ User Input**  
+   - The UI sends user input to `data_router.py`.  
+   - Plugins may modify the input.  
+
+**2️⃣ API Processing**  
+   - `data_router.py` routes the request to `api_interface.py`.  
+   - The **selected AI model** processes the request.  
+
+**3️⃣ AI Response Handling**  
+   - The AI sends back a response.  
+   - Plugins may modify the output.  
+
+**4️⃣ UI Display**  
+   - `ui_manager.py` updates the chat UI with the final response.  
+
+---
+
+## **📡 Future-Proofing for Multimodal AI**
+To support **Gemini Live, OpenAI Advanced Voice, and live video**, the system ensures:  
+✅ **The API layer supports text, images, video, and live feeds.**  
+✅ **The UI manager allows real-time interaction elements.**  
+✅ **Plugins can modify multimodal input/output.**  
+✅ **Conflict handler resolves multimodal plugin conflicts.**  
+
+---
+
+## **🚀 Next Steps**
+### ✅ **Phase 1: Implement Core System**
+1. **Define API Interface (`api_interface.py`)**  
+   - Standardized request/response format for all AI models.  
+
+2. **Develop Plugin Loader (`plugin_manager.py`)**  
+   - Scan `/plugins/` directory on startup.  
+   - Validate plugin files and prevent crashes.  
+
+3. **Implement Data Router (`data_router.py`)**  
+   - Manages movement between UI, API, and plugins.  
+
+4. **Build UI Manager (`ui_manager.py`)**  
+   - Initial PyQt6 UI with plugin compatibility.  
+
+---
+
+### ✅ **Final Check Before Implementation**
+🔍 **Does this summary meet your vision?**  
+🛠 **Any refinements before we begin implementation?**

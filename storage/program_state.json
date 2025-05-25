@@ -1,0 +1,17 @@
+{
+  "active_api": "gemini",
+  "active_model": "gemini-2.0-flash",
+  "api_settings": {
+    "chatgpt": {
+      "selected_model": "gpt-4o-mini"
+    },
+    "gemini": {
+      "temperature": "1",
+      "top_p": "0.95",
+      "top_k": "40",
+      "max_output_tokens": "1024",
+      "base64_upload_threshold": "1520",
+      "selected_model": "gemini-2.0-flash"
+    }
+  }
+}

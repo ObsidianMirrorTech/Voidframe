@@ -1,0 +1,42 @@
+{
+    "gpt-3.5-turbo": {
+        "input_types": ["text"],
+        "output_types": ["text"],
+        "compatible_file_extensions": []
+    },
+    "gpt-4-turbo": {
+        "input_types": ["text"],
+        "output_types": ["text"],
+        "compatible_file_extensions": []
+    },
+    "gpt-4.5-preview": {
+        "input_types": ["text", "image", "document", "pdf"],
+        "output_types": ["text"],
+        "compatible_file_extensions": [".txt", ".doc", ".docx", ".pdf", ".jpg", ".jpeg", ".png", ".webp", ".gif"]
+    },
+    "gpt-4o-mini": {
+        "input_types": ["text", "image"],
+        "output_types": ["text"],
+        "compatible_file_extensions": [".jpg", ".jpeg", ".png", ".webp", ".gif"]
+    },
+    "gpt-4o": {
+        "input_types": ["text", "image"],
+        "output_types": ["text"],
+        "compatible_file_extensions": [".jpg", ".jpeg", ".png", ".webp", ".gif"]
+    },
+    "o1-mini": {
+        "input_types": ["text", "image"],
+        "output_types": ["text"],
+        "compatible_file_extensions": [".jpg", ".jpeg", ".png", ".webp", ".gif"]
+    },
+    "o1": {
+        "input_types": ["text", "image"],
+        "output_types": ["text"],
+        "compatible_file_extensions": [".jpg", ".jpeg", ".png", ".webp", ".gif"]
+    },
+    "o3-mini": {
+        "input_types": ["text", "image", "document", "pdf"],
+        "output_types": ["text"],
+        "compatible_file_extensions": [".txt", ".doc", ".docx", ".pdf", ".jpg", ".jpeg", ".png", ".webp", ".gif"]
+    }
+}

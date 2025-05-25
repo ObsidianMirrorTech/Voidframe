@@ -1,0 +1,124 @@
+# **API Interface Documentation (`api_interface.py`)**
+
+## **Overview**
+The `api_interface.py` module serves as the bridge between the main program and various AI API modules (e.g., OpenAI, Gemini). It dynamically discovers available APIs, loads their configurations, retrieves model capabilities, and processes AI interactions through a standardized function called `run_inference`.
+
+This module **does not interact with external APIs directly**; instead, it manages communication between the **main program** and the **API-specific submodules** located in their respective directories.
+
+---
+
+## **Features**
+✔ **Automatic API Discovery** – Detects available APIs in the `API` directory.  
+✔ **Configuration & Capabilities Management** – Loads `config.json` and `info.json` for each API.  
+✔ **Model Validation** – Ensures that requested models exist and support the specified input type.  
+✔ **Standardized AI Interaction (`run_inference`)** – Calls the API's `run_inference` method, ensuring compatibility.  
+✔ **Future-Proofing for Multimodal Inputs** – Supports text today, expandable for images, audio, and live streaming in the future.  
+✔ **Error Handling** – Provides user-friendly errors for invalid API requests while logging details for debugging.  
+
+---
+
+## **Directory Structure**
+```
+api_prototype/
+│── API/  # Directory containing API submodules
+│   │── api_interface.py  # This file
+│   │── google/
+│   │   │── api.py  # Google Gemini API-specific logic
+│   │   │── config.json  # Configurations (e.g., available models, default settings)
+│   │   │── info.json  # Model capabilities (e.g., text, images, streaming support)
+│   │── openai/
+│   │   │── api.py  # OpenAI API-specific logic
+│   │   │── config.json  # Configurations (e.g., available models, default settings)
+│   │   │── info.json  # Model capabilities (e.g., text, images, streaming support)
+│── main.py  # Main program using the API interface
+```
+
+---
+
+## **Function Documentation**
+### **1. `discover_api_modules()`**
+- **Purpose:** Scans the `API/` directory for available APIs.  
+- **Returns:** A dictionary containing API names and paths to their respective `api.py`, `config.json`, and `info.json` files.  
+- **Handles:** Missing `info.json` by defaulting to text-only models.
+
+### **2. `load_api_module(api_name, api_path)`**
+- **Purpose:** Dynamically imports an API’s `api.py` module.  
+- **Returns:** A reference to the loaded Python module.  
+
+### **3. `load_api_config(config_path)`**
+- **Purpose:** Loads the `config.json` file for an API.  
+- **Returns:** A dictionary containing API settings and available models.  
+
+### **4. `APIInterface` (Class)**
+Manages API discovery, model validation, and inference requests.
+
+#### **Initialization (`__init__`)**
+- Loads all API modules, configurations, and model capabilities on startup.
+
+#### **`list_available_apis()`**
+- **Purpose:** Returns a list of detected APIs.  
+
+#### **`list_models(api_name)`**
+- **Purpose:** Returns available models for a given API.  
+
+#### **`get_model_info(api_name, model)`**
+- **Purpose:** Retrieves the capabilities of a specific model.  
+- **Uses:** Reads from `info.json`. Defaults to `{"input_types": ["text"], "output_types": ["text"]}` if missing.  
+
+#### **`run_inference(api_name, model, input_data, data_type="text")`**
+- **Purpose:** Routes AI interactions to the appropriate API module.  
+- **Validations:**
+  - Checks if the API and model exist.
+  - Verifies if the requested data type is supported.
+- **Calls:** The `run_inference` method of the specified API module.
+- **Returns:** The model’s response.
+
+---
+
+## **Example Usage**
+### **Main Program Using API Interface**
+```python
+from api.api_interface import APIInterface
+
+# Initialize interface
+interface = APIInterface()
+
+# List available APIs
+print("Available APIs:", interface.list_available_apis())
+
+# Select API and model
+selected_api = "openai"
+selected_model = "gpt-4o"
+
+# Get model capabilities
+capabilities = interface.get_model_info(selected_api, selected_model)
+print(f"Capabilities for {selected_model}: {capabilities}")
+
+# Sample text interaction
+input_data = {
+    "system_instruction": "You are a helpful assistant.",
+    "chat_history": [
+        {"role": "user", "content": "Hello, how do I reset my password?"}
+    ]
+}
+
+response = interface.run_inference(selected_api, selected_model, input_data, data_type="text")
+print("Model Response:", response)
+```
+
+---
+
+## **Testing (`if __name__ == "__main__":`)**
+- Prompts the user to **select an API and model**.
+- Displays the **capabilities** of the selected model.
+- Accepts a **sample text input** from the user.
+- Calls `run_inference()` and displays the model’s response.
+
+---
+
+## **Future Enhancements**
+🔹 **Live Streaming Support** – Extend `run_inference` to handle continuous audio/video streams.  
+🔹 **File Processing** – Support document or image-based queries.  
+🔹 **Centralized Logging** – Integrate with a logging system to track API interactions.  
+
+This ensures `api_interface.py` remains a **modular, scalable**, and **future-proof AI interaction hub**! 🚀
